@@ -16,7 +16,7 @@ Hyderabad Buses have GPS units installed in them like all the other city buses i
 
 There are 2-3 API's to get bus information by route/stop etc. I use the API which gives me ETA's by stop_id. It is a simple GET request with a stop_id in the query params. A sample implementation in python is shown below
 
-'''
+```
 import requests
 
 def call(stop_id):
@@ -24,11 +24,11 @@ def call(stop_id):
     response = requests.get(url)
     data = response.content #that's it, you get ETA's for the stop_id you need
 
-'''
+```
 
 The response is neither json/xml, but a string & semi-colon seperated text. [Click me](http://125.16.1.204:8080/vtpis/appQuery.do?query=348,0,67&flag=6) to find out what buses are running at the Koti Bus stop
 
-'''
+```
 data = "AP11Z6881-METRO EXPRESS,222A,KOTI,15:02:51;AP11Z6882-METRO EXPRESS,222A,KOTI,15:02:53;AP11Z7159-METRO EXPRESS,1P/25I,KOTI,15:11:09;AP11Z7298-METRO EXPRESS,222A,KOTI,15:15:49"
 
 buses = data.split(";")
@@ -40,7 +40,7 @@ for bus in buses:
 	direction = variable[2]
 	eta = variable[3] #this basically say when the bus arrives. The estimate changes as the bus moves, so you will have to request data as you need it 
 
-'''
+```
 
 ##Data & FAQ's:
 
