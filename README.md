@@ -1,6 +1,6 @@
-#TSRTC Expected Time of Arrival (ETA) API's for Hyderabad City Buses
+# TSRTC Expected Time of Arrival (ETA) API's for Hyderabad City Buses
 
-##Warning:
+## Warning:
 
 If you ever use the following data, API's. Be warned you may be voilating parts of the Indian IT act. Better consult a lawyer if you are unsure. 
 
@@ -8,11 +8,11 @@ Is there any another way to source data?
 I feel the only way to source reliable transit information is through the agency. 
 
 
-##Background:
+## Background:
 
 Hyderabad Buses have GPS units installed in them like all the other city buses in the country. The project was implemented by CMC limited (A TCS firm). The real-time arrival information (ETA) is displayed on LED sign boards at few bus-stops. At the same time they publish the information through an android app https://play.google.com/store/apps/details?id=com.tsrtc.bats
 
-##API:
+## API:
 
 There are 2-3 API's to get bus information by route/stop etc. I use the API which gives me ETA's by stop_id. It is a simple GET request with a stop_id in the query params. A sample implementation in python is shown below
 
@@ -42,7 +42,7 @@ for bus in buses:
 
 ```
 
-##Data & FAQ's:
+## Data & FAQ's:
 
 You will need all the stop_id's & route_id's & the position of stops in the route. All the information is supplied in the respective folders. You can have a look at all the bus stops on a [map](http://bl.ocks.org/anonymous/raw/e95f49cc8009cf28cb060d6a0bc864cd/)
 
@@ -74,6 +74,6 @@ You will need all the stop_id's & route_id's & the position of stops in the rout
 * Can I buzz you for any further help?
 > Please do. My details are available on my [webpage](www.lostprogrammer.com)
 
-##License:
+## License:
 
 The code & data is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
